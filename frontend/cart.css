@@ -1,0 +1,271 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100vh;
+	background-image: url(./images/background.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#container {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 80px 200px auto;
+	grid-template-columns: repeat(2, auto);
+}
+/* navBar */
+
+#navBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	background-color: white;
+}
+/* test */
+
+#navBar a {
+	text-decoration: none;
+	color: black;
+}
+#navBar a:visited {
+	text-decoration: none;
+}
+
+.icon-title {
+	font-weight: 800;
+	color: #4ea890 !important;
+	margin: 0 20px;
+	font-size: 25px;
+}
+.menu {
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 20px;
+	display: flex;
+	font-size: 20px;
+}
+
+.pageCart {
+	margin: 0 15px;
+}
+.pageBooking {
+	margin: 0 15px;
+}
+
+/* header */
+#header {
+	margin: 30px;
+	text-align: center;
+	/* border: 3px solid black; */
+	/* background-color: purple; */
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	color: white;
+	overflow: hidden;
+	/* font-size: clamp(1.5rem, 2.5vw, 4rem); */
+}
+
+#header h1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#header h2 {
+	overflow: hidden;
+	margin: 15px;
+	font-weight: 300;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Contain */
+
+#contain {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* border: 3px solid black; */
+	/* background: yellow; */
+	grid-row-start: 3;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.card {
+	border-radius: 10px;
+	width: 300px;
+	height: 400px;
+	background-color: white;
+	overflow: hidden;
+}
+
+/* Search */
+.research {
+	display: flex;
+	flex-direction: column;
+}
+
+.location,
+.date {
+	text-align: center;
+	margin: 20px auto;
+	border-radius: 10px;
+	width: 90%;
+}
+.location input,
+.date input {
+	cursor: pointer;
+	background-color: rgb(233, 228, 228);
+	width: 80%;
+	padding: 10px;
+	border-radius: 3px;
+	border: none;
+}
+.location input:nth-child(2) {
+	border-top: 1px solid rgb(177, 174, 174);
+	border-bottom-width: 20%;
+	margin-bottom: 10px;
+}
+.btn-search {
+	width: 80%;
+	margin: 100px auto 20px auto;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #4ea890;
+	border: none;
+	color: white;
+}
+
+/* Result */
+/* 
+.card .result {
+  margin-top: 100px;
+} */
+
+.result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.result img {
+	width: 130px;
+	margin: 15px 0;
+}
+/* test 123*/
+.result span {
+	border: 1px solid #4ea890;
+	width: 80%;
+}
+.result .infoResult {
+	text-align: center;
+	margin: 35px 0;
+}
+
+/* CART */
+
+#tripCome {
+	position: relative;
+}
+.tripBuy {
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	align-items: center;
+	margin: auto;
+	overflow: hidden;
+}
+#tripChoice {
+	/* overflow: scroll; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 400px;
+	width: 650px;
+	background-color: #fff !important;
+	border: 1px solid black;
+	align-items: center;
+}
+
+#tripChoice p {
+	margin: 10px 0;
+}
+.tripWish {
+	/* overflow: visible !important; */
+	overflow: scroll;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+.tripSelect {
+	align-content: flex-start;
+
+	margin: 10px 0;
+	padding: 5px;
+	background-color: #f5eeee;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.btnSupp {
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.tripWish span:last-child {
+	background: #4ea890;
+	color: white;
+}
+
+.total {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background: #001547;
+	/* position: absolute; */
+	bottom: 0;
+	height: 50px;
+}
+.total #howMuch {
+	margin: 20px;
+	color: #fff;
+}
+#buyTrip {
+	margin: 20px;
+	background: #4ea890;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+}
+
+/* reset */
